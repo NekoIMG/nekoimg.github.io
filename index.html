@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Randomneko</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+<h2>Neko</h2>
+<div id="image">
+<img src="https://nekos.life/api/neko" />
+</div>
+<script>
+setInterval(function(){
+$.getJSON('https://nekos.life/api/neko',
+    function(data) {
+    $("#image img").attr("src", data.neko);
+	});
+},5000);
+</script>
+</font>
+</body>
+</html>
